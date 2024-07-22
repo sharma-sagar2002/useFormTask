@@ -28,19 +28,15 @@ const useCustomForm = () => {
     
     else if (name === 'email') {
         const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-        if(value==='') {
-          error='Email is required'
-        }
-        else  if (!emailPattern.test(value)) {
+       
+          if (!emailPattern.test(value)) {
           error = 'Enter valid mail';
         }
-      } 
+      }
       else if (name === 'password') {
         const passwordPattern =/^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-        if(value==='') {
-          error='Password is required'
-        }
-       else if(!passwordPattern.test(value)){
+       
+        if(!passwordPattern.test(value)){
           error='Enter valid password'
         }
       }
